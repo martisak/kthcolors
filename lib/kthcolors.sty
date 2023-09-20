@@ -5,53 +5,65 @@
 %
 
 %\NeedsTexFormat{LaTeX2e}[1994/06/01]
-\ProvidesPackage{kthcolors}[2018/06/18 v2 Latex package with official KTH colors]
+\ProvidesPackage{kthcolors}
+  %[2016-09-06 v1 Latex package with official KTH colors]
 
-\RequirePackage{xcolor}
+\usepackage{xcolor}
 % Primary colors
-\definecolor{kth-blue}{RGB/cmyk}{25,84,166/0.849,0.494,0,0.349}
-\definecolor{kth-red}{RGB/cmyk}{157,16,45/0,0.898,0.713,0.384}
-\definecolor{kth-green}{RGB/cmyk}{98,146,46/0.329,0,0.685,0.427}
-% Secondary colors
-\definecolor{kth-lightblue}{RGB/cmyk}{36,160,216/0.833,0.259,0,0.153}
-\definecolor{kth-lightred}{RGB/cmyk}{228,54,62/0,0.763,0.728,0.106}
-\definecolor{kth-lightgreen}{RGB/cmyk}{176,201,43/0.124,0,0.786,0.212}
-% Tertiary colors (yet more colors)
-\definecolor{kth-pink}{RGB/cmyk}{216,84,151/10,0.611,0.301,0.153}
-\definecolor{kth-yellow}{RGB/cmyk}{250,185,25/0,0.26,0.9,0.0196}
-\definecolor{kth-darkgray}{RGB/cmyk}{101,101,108/0.0648,0.0648,0,0.576}
-\definecolor{kth-middlegray}{RGB/cmyk}{189,188,188/0,0.00529,0.00529,0.259}
-\definecolor{kth-lightgray}{RGB/cmyk}{227,229,227/0.00873,0,0.00873,0.102}
+%\definecolor{kth-blue}{RGB/cmyk}{25,84,166/1,0.55,0,0}
 
-\DeclareOption{gray}{\colorlet{gray}{kth-darkgray}}
+% Grafisk manual v 1.0 2023
+% Primary colors
+\definecolor{kth-blue}{RGB/cmyk}{0,71,145/1,0.7,0,0.12}
+\definecolor{kth-digitalblue}{RGB}{0,41,237}
+\definecolor{kth-marineblue}{RGB/cmyk}{0,0,97/1,0.95,0,0.43}
+\definecolor{kth-heavenblue}{cmyk}{0.65,0.32,0,0}
+\definecolor{kth-sand}{RGB/cmyk}{235,229,224/0.09,0.09,0.12,0}
+\definecolor{kth-lightblue}{RGB/cmyk}{222,240,255/0.15,0,0,0}
+
+% Secondary colors
+\definecolor{kth-green}{RGB/cmyk}{77,160,97/0.72,0.13,0.75,0}
+
+%\definecolor{kth-red}{RGB/cmyk}{157,16,45/0,0.898,0.713,0.384}
+
+% Secondary colors
+%\definecolor{kth-lightblue}{RGB/cmyk}{36,160,216/0.833,0.259,0,0.153}
+%\definecolor{kth-lightred}{RGB/cmyk}{228,54,62/0,0.763,0.728,0.106}
+%\definecolor{kth-lightgreen}{RGB/cmyk}{176,201,43/0.124,0,0.786,0.212}
+% Tertiary colors (yet more colors)
+%\definecolor{kth-pink}{RGB/cmyk}{216,84,151/10,0.611,0.301,0.153}
+%\definecolor{kth-yellow}{RGB/cmyk}{250,185,25/0,0.26,0.9,0.0196}
+%\definecolor{kth-darkgray}{RGB/cmyk}{101,101,108/0.0648,0.0648,0,0.576}
+%\definecolor{kth-middlegray}{RGB/cmyk}{189,188,188/0,0.00529,0.00529,0.259}
+%\definecolor{kth-lightgray}{RGB/cmyk}{227,229,227/0.00873,0,0.00873,0.102}
+
+%\DeclareOption{gray}{\colorlet{gray}{kth-darkgray}}
 
 \DeclareOption{all}{
 % Primary colors
 \colorlet{blue}{kth-blue}
-\colorlet{red}{kth-red}
+%\colorlet{red}{kth-red}
 \colorlet{green}{kth-green}
 % Secondary colors
 \colorlet{lightblue}{kth-lightblue}
-\colorlet{lightred}{kth-lightred}
-\colorlet{lightgreen}{kth-lightgreen}
+%\colorlet{lightred}{kth-lightred}
+%\colorlet{lightgreen}{kth-lightgreen}
 % Tertiary colors
-\colorlet{pink}{kth-pink}
-\colorlet{yellow}{kth-yellow}
-\colorlet{gray}{kth-darkgray}
-\colorlet{middlegray}{kth-middlegray}
-\colorlet{lightgray}{kth-lightgray}
+%\colorlet{pink}{kth-pink}
+%\colorlet{yellow}{kth-yellow}
+%\colorlet{gray}{kth-darkgray}
+%\colorlet{middlegray}{kth-middlegray}
+%\colorlet{lightgray}{kth-lightgray}
 }
 
-\DeclareOption{light}{
-\colorlet{blue}{kth-lightblue}
-\colorlet{red}{kth-lightred}
-\colorlet{green}{kth-lightgreen}
-}
+%\DeclareOption{light}{
+%\colorlet{blue}{kth-lightblue}
+%\colorlet{red}{kth-lightred}
+%\colorlet{green}{kth-lightgreen}
+%}
 
-\DeclareOption*{\colorlet{\CurrentOption}{kth-\CurrentOption}}
 
-\providecommand{\kthlogo}{logo.pdf}
-
+%\DeclareOption*{\colorlet{\CurrentOption}{kth-\CurrentOption}}
 \ProcessOptions\relax
 
 \endinput
